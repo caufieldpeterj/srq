@@ -48,7 +48,7 @@ APP.get('/srq/', (req, res) => {
         res.render('index.ejs', {
             options: allOptions
         })
-    })
+    });
 });
 
 // new
@@ -57,18 +57,23 @@ APP.get('/srq/new/', (req, res) => {
 });
 
 // create
-APP.post('/srq/', (req,res) => {
+APP.post('/srq/', (req, res) => {
     Options.create(req.body, (error, createdOption) => {
         console.log(createdOption);
         res.redirect('/srq/');
     })
-
 })
 
 // show
 APP.get('/srq/:id', (req, res) => {
-    res.render('show.ejs');
-})
+    Options.findById(req.params.id, (err, foundOption) => {
+        // res.send(foundOption);
+        console.log(foundOption);
+        res.render('show.ejs', {
+            option: foundOption
+        });
+    });
+});
 
 // listener
 APP.listen(PORT, ()=> {
