@@ -59,10 +59,15 @@ APP.get('/srq/new/', (req, res) => {
 // create
 APP.post('/srq/', (req,res) => {
     Options.create(req.body, (error, createdOption) => {
-        // console.log(createdOption);
+        console.log(createdOption);
         res.redirect('/srq/');
     })
 
+})
+
+// show
+APP.get('/srq/:id', (req, res) => {
+    res.render('show.ejs');
 })
 
 // listener

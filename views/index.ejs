@@ -15,6 +15,7 @@
         <h3>Your Selected Activities</h3>
         <% for (let i=0;i<options.length;i++) { %>
             <p><%= options[i].Name %></p>
+            <a href="/srq/<%= options[i]._id %>"></a>
         <% } %>
     </div>
 
