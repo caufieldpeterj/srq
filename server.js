@@ -42,6 +42,31 @@ const Options = require('./models/options.js');
 // })
 
 // Routes
+
+// seed
+APP.get('/srq/seed/', (req, res)=> {
+    Options.create([
+        {   
+            Name: 'Kayaking',
+            Description: 'Friends, I have been navel-gazing',
+        },
+        {
+            Name: 'Seashells',
+            Description: 'starfish and sandollars',
+        },
+        {
+            Name: 'Golfing',
+            Description: 'Below par',
+        },
+        {
+            Name: 'Circus',
+            Description: 'Animal-friendly',
+        }
+    ], (err, data) => {
+        res.redirect('/srq');
+    })
+});
+
 // index
 APP.get('/srq/', (req, res) => {
     Options.find({}, (error, allOptions) => {
@@ -53,7 +78,7 @@ APP.get('/srq/', (req, res) => {
 
 // new
 APP.get('/srq/new/', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs');
 });
 
 // create
@@ -61,8 +86,8 @@ APP.post('/srq/', (req, res) => {
     Options.create(req.body, (error, createdOption) => {
         console.log(createdOption);
         res.redirect('/srq/');
-    })
-})
+    });
+});
 
 // show
 APP.get('/srq/:id', (req, res) => {
