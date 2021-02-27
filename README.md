@@ -75,7 +75,7 @@ ctrl + C
 
 <!-- server.js -->
 // Index
-APP.get('/', (req, res) => {
+APP.get('/srq', (req, res) => {
     res.send('here for you')
 })
 
@@ -83,9 +83,76 @@ APP.get('/', (req, res) => {
 Shift + I for html boilerplate
 
 <!-- server.js -->
-// Index
-APP.get('/', (req, res) => {
+// Index Route
+APP.get('/srq', (req, res) => {
     res.render('index.ejs')
 });
 
 <!-- refresh localhost:3000/ to verify ejs template is being rendered-->
+
+<!-- server.js -->
+// New Route
+APP.get('/srq/new', (req, res) => {
+    res.send('new')
+});
+
+<!-- refresh localhost:3000/ to verify ejs template is being rendered-->
+
+<!-- server.js -->
+// New Route
+APP.get('/srq/new', (req, res)=>{
+    res.render('new.ejs');
+});
+
+
+<!-- new.ejs -->
+
+        <form action="/srq" method="POST">
+            Name: <input type="text" name="name" /><br/>
+            Description: <input type="text" name="color" /><br/>
+            <input type="submit" name="" value="Create Activity"/>
+        </form>
+
+<!-- server.js -->
+
+// Include middleware
+app.use(express.urlencoded({extended:true}));
+
+// Create Route
+APP.post('/srq', (req,res) => {
+    res.send(req.body);
+})
+
+<!-- Connect Express to Mongo -->
+$ npm i mongoose
+
+<!-- server.js -->
+// @ top of file, below express
+const mongoose = require('mongoose');
+
+
+//... and then below middleware
+
+// Database connection
+mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connection.once('open', ()=> {
+    console.log('connected to mongo');
+});
+
+<!-- Create a model for DB schema -->
+
+$ mkdir models
+$ touch models/options.js
+
+<!-- options.js -->
+
+const mongoose = require('mongoose');
+
+const optionSchema = new mongoose.Schema({
+    Name: {type: String, required: true},
+    Description: {type: String, required: true}
+});
+
+const Options = mongoose.model('Options', optionSchema);
+
+module.exports = Options;

@@ -1,20 +1,68 @@
-const { RSA_NO_PADDING } = require('constants');
 const express = require('express');
-
-const PORT = 3000;
+const mongoose = require('mongoose');
 const APP = express();
+const PORT = 3000;
 
+// Middleware
+APP.use(express.urlencoded({extended:true}));
+
+// Database connection
+mongoose.connect('mongodb://localhost:27017/srq', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connection.once('open', ()=> {
+    console.log('connected to mongo');
+});
+
+const Options = require('./models/options.js');
+
+// const manyOptions = [
+//     {   
+//         Name: 'Kayaking',
+//         Description: 'Friends, I have been navel-gazing',
+//     },
+//     {
+//         Name: 'Seashells',
+//         Description: 'starfish and sandollars',
+//     },
+//     {
+//         Name: 'Golfing',
+//         Description: 'Below par',
+//     },
+//     {
+//         Name: 'Circus',
+//         Description: 'Animal-friendly',
+//     },
+// ];
+
+// Options.insertMany(manyOptions, (error, options) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(options);
+//     }
+// })
 
 // Routes
-
 // index
-APP.get('/', (req, res) => {
-    res.render('index.ejs')
+APP.get('/srq/', (req, res) => {
+    Options.find({}, (error, allOptions) => {
+        res.render('index.ejs', {
+            options: allOptions
+        })
+    })
 });
 
 // new
-APP.get('/new', (req, res) => {
+APP.get('/srq/new/', (req, res) => {
     res.render('new.ejs')
+});
+
+// create
+APP.post('/srq/', (req,res) => {
+    Options.create(req.body, (error, createdOption) => {
+        // console.log(createdOption);
+        res.redirect('/srq/');
+    })
+
 })
 
 // listener
