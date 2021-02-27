@@ -1,16 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
+
 const APP = express();
 const PORT = 3000;
-
-// Middleware
-APP.use(express.urlencoded({extended:true}));
+const databaseName = 'srq';
 
 // Database connection
-mongoose.connect('mongodb://localhost:27017/srq', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(`mongodb://localhost:27017/${databaseName}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
+
+
+// Middleware
+APP.use(express.urlencoded({extended:true}));
+APP.use(methodOverride('_method'));
 
 const Options = require('./models/options.js');
 
@@ -42,7 +47,6 @@ const Options = require('./models/options.js');
 // })
 
 // Routes
-
 // seed
 APP.get('/srq/seed/', (req, res)=> {
     Options.create([
@@ -97,6 +101,14 @@ APP.get('/srq/:id', (req, res) => {
         res.render('show.ejs', {
             option: foundOption
         });
+    });
+});
+
+// delete
+APP.delete('/srq/:id', (req, res) => {
+    Options.findByIdAndRemove(req.params.id, (error, deletedOption) => {
+        console.log(deletedOption);
+        res.redirect('/srq');
     });
 });
 
