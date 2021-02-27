@@ -112,6 +112,21 @@ APP.delete('/srq/:id', (req, res) => {
     });
 });
 
+// edit
+APP.get('/srq/:id/edit', (req, res) => {
+    Options.findById(req.params.id, (err, foundOption) => {
+        res.render('edit.ejs', {
+            option: foundOption
+        });
+    })
+})
+
+// update
+APP.put('/srq/:id', (req, res) => {
+    Options.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedOptions) => {
+        res.redirect('/srq');
+    })
+})
 // listener
 APP.listen(PORT, ()=> {
     console.log('server is up and running');
