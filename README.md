@@ -156,3 +156,23 @@ const optionSchema = new mongoose.Schema({
 const Options = mongoose.model('Options', optionSchema);
 
 module.exports = Options;
+
+---
+Adding CSS
+<!-- https://git.generalassemb.ly/seir-1-19/student-resources/blob/main/2_full_stack_dev/w05d03/instructor_notes/static.md -->
+mkdir public
+cs public
+mkdir css
+cd css
+touch app.css
+code app.css
+
+<!-- app.css -->
+body { background-color: green}
+
+<!-- server.js / middleware -->
+APP.use(express.static('public')); //tells express to try to match requests with files in the directory called 'public'
+
+<!-- index.ejs -->
+<link rel="stylesheet" href="/css/app.css">    
+---

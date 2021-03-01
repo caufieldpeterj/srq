@@ -17,6 +17,8 @@ mongoose.connection.once('open', ()=> {
 APP.use(express.urlencoded({extended:true}));
 APP.use(methodOverride('_method'));
 APP.use('/', optionsController);
+APP.use(express.static('public')); //tells express to try to match requests with files in the directory called 'public'
+
 
 // listener
 APP.listen(PORT, ()=> {
