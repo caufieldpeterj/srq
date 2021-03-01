@@ -4,7 +4,7 @@ const Options = require('../models/options.js')
 
 // Routes
 // seed
-ROUTER.get('/srq/seed/', (req, res)=> {
+ROUTER.get('/seed/', (req, res)=> {
     Options.create([
         {   
             Name: 'Kayaking',
@@ -28,7 +28,7 @@ ROUTER.get('/srq/seed/', (req, res)=> {
 });
 
 // index
-ROUTER.get('/srq/', (req, res) => {
+ROUTER.get('/', (req, res) => {
     Options.find({}, (error, allOptions) => {
         res.render('index.ejs', {
             options: allOptions
@@ -37,12 +37,12 @@ ROUTER.get('/srq/', (req, res) => {
 });
 
 // new
-ROUTER.get('/srq/new/', (req, res) => {
+ROUTER.get('/new/', (req, res) => {
     res.render('new.ejs');
 });
 
 // create
-ROUTER.post('/srq/', (req, res) => {
+ROUTER.post('/', (req, res) => {
     Options.create(req.body, (error, createdOption) => {
         console.log(createdOption);
         res.redirect('/srq/');
@@ -50,7 +50,7 @@ ROUTER.post('/srq/', (req, res) => {
 });
 
 // show
-ROUTER.get('/srq/:id', (req, res) => {
+ROUTER.get('/:id', (req, res) => {
     Options.findById(req.params.id, (err, foundOption) => {
         // res.send(foundOption);
         console.log(foundOption);
@@ -61,7 +61,7 @@ ROUTER.get('/srq/:id', (req, res) => {
 });
 
 // delete
-ROUTER.delete('/srq/:id', (req, res) => {
+ROUTER.delete('/:id', (req, res) => {
     Options.findByIdAndRemove(req.params.id, (error, deletedOption) => {
         console.log(deletedOption);
         res.redirect('/srq');
@@ -69,7 +69,7 @@ ROUTER.delete('/srq/:id', (req, res) => {
 });
 
 // edit - get existing form data
-ROUTER.get('/srq/:id/edit', (req, res) => {
+ROUTER.get('/:id/edit', (req, res) => {
     Options.findById(req.params.id, (err, foundOption) => {
         res.render('edit.ejs', {
             option: foundOption
@@ -78,7 +78,7 @@ ROUTER.get('/srq/:id/edit', (req, res) => {
 })
 
 // update - PUT edited form data
-ROUTER.put('/srq/:id', (req, res) => {
+ROUTER.put('/:id', (req, res) => {
     // param 1 = id of the fruit we are going to update
     // param 2 = the contents of the update going to the database
     // param 3 = make sure mongoose sends us back the changed record

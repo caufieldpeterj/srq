@@ -1,9 +1,8 @@
 const express = require('express');
-const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-
-// APP config
+const methodOverride = require('method-override');
 const APP = express();
+
 const optionsController = require('./controllers/options.js')
 
 require('dotenv').config()
@@ -26,11 +25,11 @@ mongoose.connection.once('open', ()=> {
 
 //tells express to try to match requests with files in the directory called 'public'
 APP.use(express.static('public')); 
-
-APP.use(express.urlencoded({extended:true}));
-APP.use('/', optionsController);
-
 APP.use(methodOverride('_method'));
+APP.use(express.urlencoded({extended:true}));
+APP.use('/srq', optionsController);
+
+
 
 
 // listener
