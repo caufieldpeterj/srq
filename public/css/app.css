@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 body {
-    background-color: green;
+    background-color: rgb(219, 247, 255);
+    /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/153/880/original/vector-beach-wedding-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: auto; */
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
 }
 
 /* @import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');

@@ -1,6 +1,9 @@
 {
   "name": "srq",
   "version": "1.0.0",
+  "engines": {
+    "node": "v10.19.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {

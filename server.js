@@ -1,26 +1,36 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const mongoose = require('mongoose');
+const APP = express();
 const optionsController = require('./controllers/options.js')
 
-const APP = express();
-const PORT = 3000;
+
+// PORT
+const PORT = process.env.PORT || 3000;
+
+// Database
 const databaseName = 'srq';
+const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${databaseName}`
+
 
 // Database connection
-mongoose.connect(`mongodb://localhost:27017/${databaseName}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
 // Middleware
+
+//tells express to try to match requests with files in the directory called 'public'
+APP.use(express.static('public')); 
+
 APP.use(express.urlencoded({extended:true}));
-APP.use(methodOverride('_method'));
 APP.use('/', optionsController);
-APP.use(express.static('public')); //tells express to try to match requests with files in the directory called 'public'
+
+APP.use(methodOverride('_method'));
 
 
 // listener
 APP.listen(PORT, ()=> {
-    console.log('server is up and running');
+    console.log('server is up and running on '+ PORT);
 });

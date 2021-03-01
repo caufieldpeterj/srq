@@ -176,3 +176,7 @@ APP.use(express.static('public')); //tells express to try to match requests with
 <!-- index.ejs -->
 <link rel="stylesheet" href="/css/app.css">    
 ---
+
+Styling inspo
+- https://www.sitebuilderreport.com/inspiration/wedding-websites-examples
+- https://fonts.google.com/specimen/Dancing+Script?preview.text_type=custom&preview.text=Joyfully%20invite%20you%20to%20their%20wedding%20celebration&sidebar.open=true&selection.family=Dancing+Script:wght@700
