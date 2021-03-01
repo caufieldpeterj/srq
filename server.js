@@ -1,16 +1,19 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+
+// APP config
 const APP = express();
 const optionsController = require('./controllers/options.js')
 
+require('dotenv').config()
 
 // PORT
 const PORT = process.env.PORT || 3000;
 
 // Database
 const databaseName = 'srq';
-const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${databaseName}`
+const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${databaseName}`;
 
 
 // Database connection

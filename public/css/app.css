@@ -9,10 +9,27 @@ body {
     /* background-size: auto; */
     font-family: 'Dancing Script', cursive;
     text-align: center;
+    background-position-y: top;
+    background-position-x: center;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
+h1 {
+    /* padding: 1em */
+    margin-top: 150px;
+}
+
+#rsvp {
+    margin-top: 150px;
+    font-size: 1.5em;
+}
+
+/* 
 body {
   background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);
   margin: 0;
