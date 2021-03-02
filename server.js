@@ -29,8 +29,9 @@ APP.use(methodOverride('_method'));
 APP.use(express.urlencoded({extended:true}));
 APP.use('/srq', optionsController);
 
-
-
+APP.get('/', (req, res) => {
+    res.redirect('/srq');
+})
 
 // listener
 APP.listen(PORT, ()=> {

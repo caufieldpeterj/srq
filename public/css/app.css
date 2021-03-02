@@ -33,6 +33,22 @@ nav {
     color: honeydew;
 }
 
+#edit, #delete {
+    background-color: rgb(212, 212, 212);
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    font-size: 18px;
+    padding: 5px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: black;
+    margin: 10px;
+    display: flexbox;
+}
+#delete:hover {
+    cursor: pointer
+}
+
 /* 
 body {
   background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);

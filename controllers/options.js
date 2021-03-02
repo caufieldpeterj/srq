@@ -8,7 +8,7 @@ ROUTER.get('/seed/', (req, res)=> {
     Options.create([
         {   
             Name: 'Kayaking',
-            Description: 'Friends, I have been navel-gazing',
+            Description: 'Let\'s paddle',
         },
         {
             Name: 'Seashells',
