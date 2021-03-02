@@ -184,3 +184,7 @@ Styling inspo
 
 <!-- npm i dotenv -->
 https://git.generalassemb.ly/seir-1-19/student-resources/blob/main/2_full_stack_dev/w07d01/instructor_notes/heroku.md
+
+
+<!-- google maps API key -->
+AIzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM

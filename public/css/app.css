@@ -4,13 +4,14 @@ body {
     background-color: rgb(219, 247, 255);
     /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
     background-image: url('https://static.vecteezy.com/system/resources/previews/000/153/880/original/vector-beach-wedding-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-size: auto; */
     font-family: 'Dancing Script', cursive;
     text-align: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* background-size: auto; */
     background-position-y: top;
     background-position-x: center;
+    max-width: auto;
 }
 
 ul {
@@ -19,35 +20,56 @@ ul {
     padding: 0;
 }
 
-h1 {
-    /* padding: 1em */
+/* h1, h2, h3 {
+    padding: 1em 
     margin-top: 150px;
+    font-size: 80px
 }
+*/
 
-#rsvp {
-    margin-top: 150px;
-    font-size: 1.5em;
-}
-
-nav {
-    color: honeydew;
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: black;
 }
 
 #edit, #delete {
-    background-color: rgb(212, 212, 212);
     font-family: 'Dancing Script', cursive;
     color: black;
-    font-size: 18px;
-    padding: 5px 5px;
+    border-radius: 6%;
     text-decoration: none;
     text-transform: uppercase;
-    border: black;
-    margin: 10px;
-    display: flexbox;
+    /* rounded edges */
+    /* font-size: 18px; */
+    /* border: solid black; */
+    /* margin: 10px; */
 }
-#delete:hover {
-    cursor: pointer
+
+img {
+    display: inline-block;
+    z-index: -1;
+    height: 600px;
 }
+
+.together {
+    margin-top: 100px;
+}
+
+
+/* .nav {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    color: honeydew;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-right: 250px;
+    margin-left: 250px;
+} */
+
+
 
 /* 
 body {

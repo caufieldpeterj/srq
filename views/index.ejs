@@ -4,62 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/app.css">
     <title>SRQ Bound</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <base href="/">
+    <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-    <nav>
-        <a href="">Our Story</a>
-        <a href="">The Wedding</a>
-        <a href="">Gallery</a>
-        <a href="">Contact</a>
-        <a href="">Registry</a>
-        <a href="">RSVP</a>
-    </nav>
-    <h3>Together with their families</h3>
-    <br/>
-    <h1>Casey & Peter</h1>
-    <h3>Joyfully invite you to their wedding celebration</h3>
-    <h2>April 2nd, 2022, 5:00 PM | Longboat Key, FL</h2>
-    <br/>
-    <br/>
+    <div class="container">
+    <div class="nav">
+        <nav>
+            <a class="button" href="">Our Story</a>
+            <a class="button" href="">The Wedding</a>
+            <a class="button" href="">Gallery</a>
+            <a class="button" href="">Contact</a>
+            <a class="button" href="">Registry</a>
+            <a class="button" href="">RSVP</a>
+        </nav>
+    </div>
+    <div class="welcome">
+        <h3>Together with their families</h3>
+        <h1>Casey & Peter</h1>
+        <h3>Joyfully invite you to their wedding celebration</h3>
+        <h2>April 2nd, 2022, 5:00 PM | Longboat Key, FL</h2>        
+        <!-- GOOGLE MAPS EMBEDDED -->
+        <!-- https://developers.google.com/maps/documentation/embed/get-started -->      
+        <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM
+                &q=Longboat+Key+Club,Sarasota+FL">
+        </iframe>
+        <br/>
+        <br/>
+    </div>
+        <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
 
-    <a href="/srq/new">Create New Activity</a>
-    
-
-    <div>
-        <h3>Your Selected Activities</h3>
-        <ul>
-            <% for (let i=0;i<options.length;i++) { %>
-            <li>
-                <a href="/srq/<%= options[i]._id %>">
-                <%= options[i].Name %>
-                </a> 
-                <form action='/srq/<%= options[i]._id %>?_method=DELETE' method="POST">
-                    <input id="delete" type="submit" value="DELETE">
-                </form>
-                <a id='edit' href="/srq/<%= options[i]._id %>/edit">Edit</a>
-            </li>
-            <% } %>
-            <br/>
-        </ul>
+    <div class="row">
+        <div>
+            <h3>Your Selected Activities</h3>
+            <ul>
+                <% for (let i=0;i<options.length;i++) { %>
+                <li>
+                    <a href="/srq/<%= options[i]._id %>">
+                    <%= options[i].Name %>
+                    </a> 
+                    <form action='/srq/<%= options[i]._id %>?_method=DELETE' method="POST">
+                        <input id="delete" type="submit" value="DELETE">
+                    </form>
+                    <a class="button" id='edit' href="/srq/<%= options[i]._id %>/edit">Edit</a>
+                </li>
+                <% } %>
+                <br/>
+            </ul>
+        </div>
     </div>
 
-
-    <div>
-        <h3>Arts</h3>
+    <div class="suggestions">
+        <div class="one-third column">
+            <h3>Arts</h3>
+                <a class="button" href="https://www.ringling.org/">The Ringling</a>
+                <a class="button" href="https://selby.org/">Marie Selby Botanical Gardens</a>
+                <a class="button" href="https://www.vanwezel.org/">Van Wezel Hall</a>
+        </div>
+        <div class="one-third column">
+            <h3>Beaches</h3>
+                <a class="button" href="https://www.visitsarasota.com/longboat-key">Longboat Key</a>
+                <a class="button" href="https://www.visitsarasota.com/siesta-key">Siesta Key</a>
+                <a class="button" href="https://www.visitsarasota.com/lido-key-st-armands-circle">Lido Key & St. Armands Circle</a>
+        </div>
+        <div class="one-third column">
+            <h3>Dining</h3>
+                <a class="button" href="https://www.dineshore.com/location/shore-st-armands-circle/">Shore</a>
+                <a class="button" href=""></a>
+                <a class="button" href=""></a>
+        </div>
     </div>
-
-    <div>
-        <h3>Beaches</h3>
-    </div>
-
-    <div>
-        <h3>Dining</h3>
-    </div>
-
-    <div>
-        <h3>Other</h3>
     </div>
 </body>
 

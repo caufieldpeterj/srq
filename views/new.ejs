@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <title>New Activity</title>
 </head>
 <body>
-    <h1>Create a New Activity</h1>
-    <a href="/srq">Back to Homepage</a>
-    <br/><br/>
-    <form action='/srq' method="POST">
-        Name: <input type="text" name="Name"> 
-        <br/>
-        Description: <input type="text" name="Description">
-        <br/><br/>
-        <input type="submit" value="SUBMIT">
-    </form>
+    <div class="container">
+        <div> 
+            <h1>Create a New Activity</h1>
+        </div>
+        <div>
+            <a class="button" href="/srq">Back to Homepage</a>
+            <br>
+            <br>
+        </div>
+        <div>
+            <form action='/srq' method="POST">
+                Name: <input type="text" name="Name"> 
+                <br/>
+                Description: <input type="text" name="Description">
+                <br/><br/>
+                <input class="button button-primary" type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
