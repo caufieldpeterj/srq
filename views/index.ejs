@@ -25,7 +25,9 @@
         <h3>Together with their families</h3>
         <h1>Casey & Peter</h1>
         <h3>Joyfully invite you to their wedding celebration</h3>
-        <h2>April 2nd, 2022, 5:00 PM | Longboat Key, FL</h2>        
+        <h2>April 2nd, 2022, 5:00 PM | Longboat Key, FL</h2>
+    </div>
+    <div class="map">
         <!-- GOOGLE MAPS EMBEDDED -->
         <!-- https://developers.google.com/maps/documentation/embed/get-started -->      
         <iframe
@@ -34,17 +36,15 @@
             style="border:0"
             loading="lazy"
             allowfullscreen
-            src="https://www.google.com/maps/embed/v1/place?key=IzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM
                 &q=Longboat+Key+Club,Sarasota+FL">
         </iframe>
-        <br/>
-        <br/>
     </div>
-        <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
+    
+    <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
 
     <div class="row">
         <div>
-            <h3>Your Selected Activities</h3>
             <ul>
                 <% for (let i=0;i<options.length;i++) { %>
                 <li>
@@ -62,27 +62,50 @@
         </div>
     </div>
 
+    <h3>Suggestions from the Bride</h3>
     <div class="suggestions">
         <div class="one-third column">
             <h3>Arts</h3>
-                <a class="button" href="https://www.ringling.org/">The Ringling</a>
-                <a class="button" href="https://selby.org/">Marie Selby Botanical Gardens</a>
-                <a class="button" href="https://www.vanwezel.org/">Van Wezel Hall</a>
+                <a class="u-full-width button" href="https://www.ringling.org/">The Ringling Museum</a>
+                <a class="u-full-width button" href="https://selby.org/">Botanical Gardens</a>
+                <a class="u-full-width button" href="https://www.vanwezel.org/">Performing Arts</a>
         </div>
         <div class="one-third column">
             <h3>Beaches</h3>
-                <a class="button" href="https://www.visitsarasota.com/longboat-key">Longboat Key</a>
-                <a class="button" href="https://www.visitsarasota.com/siesta-key">Siesta Key</a>
-                <a class="button" href="https://www.visitsarasota.com/lido-key-st-armands-circle">Lido Key & St. Armands Circle</a>
+                <a class="u-full-width button" href="https://www.visitsarasota.com/longboat-key">Longboat Key</a>
+                <a class="u-full-width button" href="https://www.visitsarasota.com/siesta-key">Siesta Key</a>
+                <a class="u-full-width button" href="https://www.visitsarasota.com/lido-key-st-armands-circle">Lido Key & St. Armands Circle</a>
         </div>
         <div class="one-third column">
             <h3>Dining</h3>
-                <a class="button" href="https://www.dineshore.com/location/shore-st-armands-circle/">Shore</a>
-                <a class="button" href=""></a>
-                <a class="button" href=""></a>
+                <a class="u-full-width button" href="https://www.dineshore.com/location/shore-longboat-key/">Shore</a>
+                <a class="u-full-width button" href="https://owensfishcamp.com/">Owen's Fish Camp</a>
+                <a class="u-full-width button" href="https://www.columbiarestaurant.com/Menus-By-Location/Locations/St-Armands-Circle">Columbia</a>
         </div>
     </div>
+
+    <h3>... from the Groom</h3>
+    <div class="suggestions">
+        <div class="one-third column">
+            <h3>Offshore</h3>
+                <a class="u-full-width button" href="">Fishing</a>
+                <a class="u-full-width button" href="">Kayaking</a>
+                <a class="u-full-width button" href="">Boating</a>
+        </div>
+        <div class="one-third column">
+            <h3>For Par</h3>
+                <a class="u-full-width button" href="">The Concession</a>
+                <a class="u-full-width button" href="">LBK Club</a>
+                <a class="u-full-width button" href="">Bradenton</a>
+        </div>
+        <div class="one-third column">
+            <h3>Exercise</h3>
+                <a class="u-full-width button" href="">Walking</a>
+                <a class="u-full-width button" href="">Biking</a>
+                <a class="u-full-width button" href="">Yoga</a>
+        </div>
     </div>
+</div>
 </body>
 
 </html>

@@ -3,29 +3,21 @@
 body {
     background-color: rgb(219, 247, 255);
     /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/153/880/original/vector-beach-wedding-background.jpg');
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    /* background-size: cover; */
-    background-repeat: no-repeat;
+    background-size: cover;
     /* background-size: auto; */
+    background-image: url('./teahub.io-beach-wallpaper-10692.png');
     background-position-y: top;
     background-position-x: center;
-    max-width: auto;
+
 }
 
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-/* h1, h2, h3 {
-    padding: 1em 
-    margin-top: 150px;
-    font-size: 80px
-}
-*/
+} */
 
 a:link, a:visited, a:active {
     text-decoration: none;
@@ -33,7 +25,6 @@ a:link, a:visited, a:active {
 }
 
 #edit, #delete {
-    font-family: 'Dancing Script', cursive;
     color: black;
     border-radius: 6%;
     text-decoration: none;
@@ -43,17 +34,6 @@ a:link, a:visited, a:active {
     /* border: solid black; */
     /* margin: 10px; */
 }
-
-img {
-    display: inline-block;
-    z-index: -1;
-    height: 600px;
-}
-
-.together {
-    margin-top: 100px;
-}
-
 
 /* .nav {
     text-decoration: none;
@@ -101,23 +81,3 @@ a {
 a:hover {
   color: ghostwhite;
 }
-
-li {
-  list-style: none;
-}
-
-li a {
-  color: mediumseagreen;
-}
-
-input[type=text] {
-  padding: .3em;
-}
-
-input[type=submit] {
-  padding: .3em;
-  color: orange;
-  background: mediumseagreen;
-  font-size: 1em;
-  border-radius: 10%;
-} */
