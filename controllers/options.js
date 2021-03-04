@@ -29,6 +29,7 @@ ROUTER.get('/seed/', (req, res)=> {
 
 // index
 ROUTER.get('/', (req, res) => {
+    // console.log(req.session);
     Options.find({}, (error, allOptions) => {
         res.render('index.ejs', {
             options: allOptions

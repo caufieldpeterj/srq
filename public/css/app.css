@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+}
+
+section {
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+  scroll-snap-stop: always;
+}
+
 body {
   /* background-color: rgb(219, 247, 255); */
   /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
@@ -13,17 +33,28 @@ body {
   /* background-image: linear-gradient(to bottom right,rgb(70, 183, 235),  blanchedalmond); */
 }
 
+
+
 #primary {
   background-image: url('./teahub.io-beach-wallpaper-10692.png');
   display: flex;
   flex-direction: column;
-  background-size: cover;
+  height: 100vh;
+  min-height: 150em;
+  background-repeat: no-repeat;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
 }
 
-#proposal {
+.welcome {
+  justify-content: center;
+  align-items: center;
+}
+
+#proposal-pic {
   margin-right: auto;
   margin-left: auto;
-  max-width: 45%;
+  height: 100vh;
 }
 
 ul {
