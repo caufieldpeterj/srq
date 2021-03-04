@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
-    background-color: rgb(219, 247, 255);
-    /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    background-size: cover;
-    /* background-size: auto; */
-    /* background-image: url('./teahub.io-beach-wallpaper-10692.png'); */
-    background-image: linear-gradient(to bottom right,rgb(70, 183, 235),  blanchedalmond);
-    background-position-y: top;
-    background-position-x: center;
+  background-color: rgb(219, 247, 255);
+  /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
 
+  /* background-size: auto; */
+  /* background-image: url('./teahub.io-beach-wallpaper-10692.png'); */
+  /* background-image: linear-gradient(to bottom right,rgb(70, 183, 235),  blanchedalmond); */
+
+}
+
+#primary {
+  background-image: url('./teahub.io-beach-wallpaper-10692.png');
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
 }
 
 .button, .u-full-width button {
