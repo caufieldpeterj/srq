@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3000;
 const databaseName = 'srq';
 const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${databaseName}`;
 
-
 // Database connection
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.connection.once('open', ()=> {

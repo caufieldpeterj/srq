@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
-  background-color: rgb(219, 247, 255);
+  /* background-color: rgb(219, 247, 255); */
   /* background-image: url('https://www.publicdomainpictures.net/pictures/40000/velka/white-rose-on-the-black-background.jpg'); */
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   /* background-size: auto; */
   /* background-image: url('./teahub.io-beach-wallpaper-10692.png'); */
   /* background-image: linear-gradient(to bottom right,rgb(70, 183, 235),  blanchedalmond); */
-
 }
 
 #primary {
@@ -18,38 +20,37 @@ body {
   background-size: cover;
 }
 
-.button, .u-full-width button {
-  background-color: rgb(86, 214, 165);
+#proposal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
+
+
 
 a:link, a:visited, a:active {
     text-decoration: none;
     color: black;
 }
 
-#proposal {
-  max-height: 500px;
-}
+
 
 #edit, #delete {
     color: black;
-    border-radius: 6%;
+    padding: 0em;
+    margin:0em;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: rgb(86, 214, 165);
-    font-family: 'Dancing Script', cursive;
-    /* rounded edges */
-    /* font-size: 18px; */
-    /* border: solid black; */
 }
 
-/* .nav {
+
+/*
+.nav {
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -61,16 +62,9 @@ a:link, a:visited, a:active {
     padding: 15px;
     margin-right: 250px;
     margin-left: 250px;
-} */
+} 
 
 
-
-/* 
-body {
-  background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);
-  margin: 0;
-  font-family: 'Comfortaa', cursive;
-}
 
 h1 {
   font-family: 'Righteous', cursive;
@@ -94,4 +88,4 @@ a {
 
 a:hover {
   color: ghostwhite;
-}
+} */
