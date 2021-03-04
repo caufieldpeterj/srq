@@ -58,16 +58,6 @@ APP.get('/', (req, res) => {
     res.redirect('/srq');
 })
 
-/*
-
-
-// stored in the DB
-const hashedPassword = bcrypt.hashSync('password1234' , bcrypt.genSaltSync(10));
-// generated from a password form
-const hashedPasswordGuess = bcrypt.hashSync('password1234' , bcrypt.genSaltSync(10));
-// How to make sure a user can login
-bcrypt.compareSync(hashedPasswordGuess, hashedPassword);
-*/
 
 // listener
 APP.listen(PORT, ()=> {
