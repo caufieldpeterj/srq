@@ -53,7 +53,6 @@
                 <a class="u-full-width button" target="_blank" rel="noopener noreferrer" href="https://www.columbiarestaurant.com/Menus-By-Location/Locations/St-Armands-Circle">Columbia</a>
         </div>
     </div>
-
     <h3>... from the Groom</h3>
     <div class="suggestions">
         <div class="one-third column">
@@ -86,10 +85,11 @@
                     <a href="/srq/<%= options[i]._id %>">
                     <%= options[i].Name %>
                     </a> 
+                    <br>
+                    <a class="button" href="/srq/<%= options[i]._id %>/edit">Edit</a>
                     <form action='/srq/<%= options[i]._id %>?_method=DELETE' method="POST">
-                        <input class="u-full-width button" id="delete" type="submit" value="DELETE">
+                        <input class="button" id="delete" type="submit" value="DELETE">
                     </form>
-                    <a class="u-full-width button" href="/srq/<%= options[i]._id %>/edit">Edit</a>
                 </li>
                 <% } %>
                 <br/>

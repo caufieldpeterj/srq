@@ -30,19 +30,14 @@ ul {
     list-style-type: none;
 }
 
-
-
 a:link, a:visited, a:active {
     text-decoration: none;
     color: black;
 }
 
-
-
-#edit, #delete {
+#delete {
     color: black;
-    padding: 0em;
-    margin:0em;
+    padding: 0 1.9em 0 1.9em;
     text-decoration: none;
     text-transform: uppercase;
 }
