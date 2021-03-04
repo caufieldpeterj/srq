@@ -1,3 +1,4 @@
+// REQUIRED LIBRARIES
 // npm i express
 const express = require('express');
 // npm i mongoose
@@ -25,7 +26,7 @@ const optionsController = require('./controllers/options.js');
 const sessionsController = require('./controllers/sessions.js');
 const usersController = require('./controllers/users.js');
 
-// Middleware
+// Middleware - code that runs when server gets request but before passed to server route
 //tells express to try to match requests with files in the directory called 'public'
 APP.use(express.static('public')); 
 APP.use(methodOverride('_method'));

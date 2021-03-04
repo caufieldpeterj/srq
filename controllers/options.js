@@ -9,18 +9,22 @@ ROUTER.get('/seed/', (req, res)=> {
         {   
             Name: 'Kayaking',
             Description: 'Let\'s paddle',
+            Date: null,
         },
         {
             Name: 'Seashells',
             Description: 'starfish and sandollars',
+            Date: null,
         },
         {
             Name: 'Golfing',
             Description: 'Below par',
+            Date: null,
         },
         {
             Name: 'Circus',
             Description: 'Animal-friendly',
+            Date: null,
         }
     ], (err, data) => {
         res.redirect('/srq');
