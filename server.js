@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const APP = express();
-
+const session = require('express-session');
 const optionsController = require('./controllers/options.js')
 
 require('dotenv').config()
@@ -28,6 +28,13 @@ APP.use(express.static('public'));
 APP.use(methodOverride('_method'));
 APP.use(express.urlencoded({extended:true}));
 APP.use('/srq', optionsController);
+APP.use(
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+    })
+)
 
 APP.get('/', (req, res) => {
     res.redirect('/srq');
