@@ -7,7 +7,8 @@ body {
     text-align: center;
     background-size: cover;
     /* background-size: auto; */
-    background-image: url('./teahub.io-beach-wallpaper-10692.png');
+    /* background-image: url('./teahub.io-beach-wallpaper-10692.png'); */
+    background-image: linear-gradient(to bottom right,rgb(70, 183, 235),  blanchedalmond);
     background-position-y: top;
     background-position-x: center;
 
@@ -26,6 +27,10 @@ ul {
 a:link, a:visited, a:active {
     text-decoration: none;
     color: black;
+}
+
+#proposal {
+  max-height: 500px;
 }
 
 #edit, #delete {
