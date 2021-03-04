@@ -28,27 +28,6 @@
         <h2>April 2nd, 2022, 5:00 PM | Longboat Key, FL</h2>
     </div>
     
-    <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
-
-    <div class="row">
-        <div>
-            <ul>
-                <% for (let i=0;i<options.length;i++) { %>
-                <li>
-                    <a href="/srq/<%= options[i]._id %>">
-                    <%= options[i].Name %>
-                    </a> 
-                    <form action='/srq/<%= options[i]._id %>?_method=DELETE' method="POST">
-                        <input id="delete" type="submit" value="DELETE">
-                    </form>
-                    <a class="button" id='edit' href="/srq/<%= options[i]._id %>/edit">Edit</a>
-                </li>
-                <% } %>
-                <br/>
-            </ul>
-        </div>
-    </div>
-
     <h3>Suggestions from the Bride</h3>
     <div class="suggestions">
         <div class="one-third column">
@@ -61,7 +40,7 @@
             <h3>Beaches</h3>
                 <a class="u-full-width button" href="https://www.visitsarasota.com/longboat-key">Longboat Key</a>
                 <a class="u-full-width button" href="https://www.visitsarasota.com/siesta-key">Siesta Key</a>
-                <a class="u-full-width button" href="https://www.visitsarasota.com/lido-key-st-armands-circle">Lido Key & St. Armands Circle</a>
+                <a class="u-full-width button" href="https://www.visitsarasota.com/lido-key-st-armands-circle">Lido Key & St. Armands</a>
         </div>
         <div class="one-third column">
             <h3>Dining</h3>
@@ -90,6 +69,27 @@
                 <a class="u-full-width button" href="">Walking</a>
                 <a class="u-full-width button" href="">Biking</a>
                 <a class="u-full-width button" href="">Yoga</a>
+        </div>
+    </div>
+
+    <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
+
+    <div class="row">
+        <div>
+            <ul>
+                <% for (let i=0;i<options.length;i++) { %>
+                <li>
+                    <a href="/srq/<%= options[i]._id %>">
+                    <%= options[i].Name %>
+                    </a> 
+                    <form action='/srq/<%= options[i]._id %>?_method=DELETE' method="POST">
+                        <input class="u-full-width button" id="delete" type="submit" value="DELETE">
+                    </form>
+                    <a class="u-full-width button" href="/srq/<%= options[i]._id %>/edit">Edit</a>
+                </li>
+                <% } %>
+                <br/>
+            </ul>
         </div>
     </div>
 </div>
