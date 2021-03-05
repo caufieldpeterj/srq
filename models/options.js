@@ -1,4 +1,4 @@
-// create a model to interact with the database through schema
+// create a model to interact with the database through options (activity) schema
 
 const mongoose = require('mongoose');
 

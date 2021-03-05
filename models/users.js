@@ -1,3 +1,5 @@
+// create a model to interact with the database through user schema
+
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({

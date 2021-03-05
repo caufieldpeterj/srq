@@ -1,4 +1,6 @@
-// REQUIRED LIBRARIES
+// ===========================================
+//  Requirements
+// ===========================================
 // npm i express
 const express = require('express');
 // npm i mongoose
@@ -9,26 +11,40 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 // npm i bcrypt
 const bcrypt = require('bcrypt');
-
 // import and configure dotenv
 require('dotenv').config();
 
+
+
+// ===========================================
 // APP Configuration
+// ===========================================
 const APP = express();
 const PORT = process.env.PORT || 3000;
 
+
+
+// ===========================================
 // Database Configuration
+// ===========================================
 const databaseName = 'srq';
 const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${databaseName}`;
 
-// controller logic
+
+
+// ===========================================
+// Controller Logic
+// ===========================================
 const optionsController = require('./controllers/options.js');
 const sessionsController = require('./controllers/sessions.js');
 const usersController = require('./controllers/users.js');
 const isAuthenticated = require('./services.js');
 
 
+
+// ===========================================
 // Middleware - code that runs when server gets request but before passed to server route
+// ===========================================
 //tells express to try to match requests with files in the directory called 'public'
 APP.use(express.static('public')); 
 APP.use(methodOverride('_method'));
@@ -45,24 +61,40 @@ APP.use(
 );
 // APP.use(isAuthenticated);
 
+
+
+// ===========================================
 // Register our controllers on their routes
+// ===========================================
 APP.use('/srq', optionsController);
 APP.use('/sessions', sessionsController);
 APP.use('/users', usersController);
 
+
+
+// ===========================================
 // Database connection
+// ===========================================
 // make a connection to the database, this connection will persist
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
+
+
+// ===========================================
+// Redirect
+// ===========================================
 APP.get('/', (req, res) => {
     res.redirect('/srq');
 });
 
 
-// listener
+
+// ===========================================
+// Listener
+// ===========================================
 APP.listen(PORT, ()=> {
     console.log('server is up and running on '+ PORT);
 });
