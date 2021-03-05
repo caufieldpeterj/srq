@@ -34,13 +34,11 @@ body {
 }
 
 
-
 #primary {
   background-image: url('./teahub.io-beach-wallpaper-10692.png');
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 150em;
+  height: 90vh;
   background-repeat: no-repeat;
   font-family: 'Dancing Script', cursive;
   font-weight: 900;
