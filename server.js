@@ -25,7 +25,7 @@ const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${data
 const optionsController = require('./controllers/options.js');
 const sessionsController = require('./controllers/sessions.js');
 const usersController = require('./controllers/users.js');
-
+const isAuthenticated = require('./services.js');
 // Middleware - code that runs when server gets request but before passed to server route
 //tells express to try to match requests with files in the directory called 'public'
 APP.use(express.static('public')); 
@@ -41,6 +41,7 @@ APP.use(
         saveUninitialized: false
     })
 );
+// APP.use(isAuthenticated);
 
 // Register our controllers on their routes
 APP.use('/srq', optionsController);

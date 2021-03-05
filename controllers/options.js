@@ -1,6 +1,9 @@
 const express = require('express');
+const isAuthenticated = require('../services.js');
 const ROUTER = express.Router();
 const Options = require('../models/options.js')
+
+ROUTER.use(isAuthenticated);
 
 // Routes
 // seed
