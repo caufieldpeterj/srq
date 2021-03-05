@@ -11,15 +11,11 @@
 <body>
     <div class="container">
         <h1><%= option.Name %></h1>
+        <a class="u-full-width button button-primary" href="/srq/">Back to Home Page</a>
         <h2><%= option.Description %></h2>
         <h2><%= option.Date %></h2>
-        <a class="u-full-width button button-primary" href="/srq/">Back to Home Page</a>
-    </div>
 
-    <!-- concatenate google maps api query using option.Name -->
-    
-
-    <div class="map">
+    <!-- concatenate google maps api query using option.Name -->  
         <!-- GOOGLE MAPS EMBEDDED -->
         <!-- https://developers.google.com/maps/documentation/embed/get-started -->      
         <iframe
@@ -31,6 +27,7 @@
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM
                 &q=Sarasota+FL">
         </iframe>
+
     </div>
 </body>
 </html>
