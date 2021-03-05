@@ -8,10 +8,10 @@ const methodOverride = require('method-override');
 // npm i express-session - requires express-session in teh server
 const session = require('express-session');
 // npm i bcrypt
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
 
 // import and configure dotenv
-require('dotenv').config()
+require('dotenv').config();
 
 // APP Configuration
 const APP = express();
@@ -26,6 +26,8 @@ const optionsController = require('./controllers/options.js');
 const sessionsController = require('./controllers/sessions.js');
 const usersController = require('./controllers/users.js');
 const isAuthenticated = require('./services.js');
+
+
 // Middleware - code that runs when server gets request but before passed to server route
 //tells express to try to match requests with files in the directory called 'public'
 APP.use(express.static('public')); 
@@ -57,7 +59,7 @@ mongoose.connection.once('open', ()=> {
 
 APP.get('/', (req, res) => {
     res.redirect('/srq');
-})
+});
 
 
 // listener
