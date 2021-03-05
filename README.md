@@ -1,6 +1,3 @@
-# project-2.1
-
----
 # Selling SRQ '22
 ## Problem:
 My fiancé and I grew up in New Jersey, and we're getting married on the west coast of Florida due to venue restrictions. Few wedding guests are familiar with our wedding destination of Sarasota, FL.
@@ -11,13 +8,32 @@ Our guests, and other couples planning a wedding in SRQ.
 
 ## Stretch Goals
 [x] Clean styling, dig in with CSS 
+
 [x] [Include Google Maps API on show page](https://developers.google.com/maps/gmp-get-started)
+
 [ ] [Include Yelp API on dining show pages](https://www.yelp.com/fusion)
+
 [x] Mobile friendly design thru media queries (thanks Skeleton!)
+
 [x] Authentication
+
 [ ] EJS partials
 
 ## What I Used
+
+Bcrypt
+
+Dotenv
+
+EJS
+
+Express & Express Session
+
+Method-override
+
+Mongoose
+
+Node.js
 
 MVC file structure to keep my code organized, much easier to debug!
 
@@ -35,3 +51,7 @@ I'd like to revisit the show page for each activity. I was hoping to perform a g
 ## Feedback
 
 All comments and questions are welcome!
+
+## Access
+
+Although you don't get access to the wedding without a formal written invitation... [check out my application here!](https://dashboard.heroku.com/apps/stormy-hollows-21883)
