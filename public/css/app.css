@@ -42,12 +42,10 @@ body {
   background-repeat: no-repeat;
   font-family: 'Dancing Script', cursive;
   font-weight: 900;
-}
-
-.welcome {
   justify-content: center;
   align-items: center;
 }
+
 
 #proposal-pic {
   margin-right: auto;
