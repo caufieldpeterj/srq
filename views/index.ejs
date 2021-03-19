@@ -14,12 +14,12 @@
         <section>
             <div class="nav">
                 <nav>
-                    <a class="button" href="">Our Story</a>
-                    <a class="button" href="">The Wedding</a>
-                    <a class="button" href="">Gallery</a>
-                    <a class="button" href="">Contact</a>
-                    <a class="button" href="">Registry</a>
-                    <a class="button" href="">RSVP</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">Our Story</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">The Wedding</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">Gallery</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">Contact</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">Registry</a>
+                    <a class="button" href="https://andazpress.files.wordpress.com/2015/04/coming-soon.jpg">RSVP</a>
                 </nav>
                 <div id="primary">
                     <div class="welcome">
@@ -45,7 +45,8 @@
         
         <section>
             <div>
-                <img src="https://lh3.googleusercontent.com/proxy/irDSRp6XK50gcAwPk4XJVjZIQJ7tfw2x6BgSTX_0EOeEeDMFl3dJcpno8t8QTlXbNQ0Byncmn3Etx4W_FVwjxcV5LL-KUMTDgH6titC6aRYu2-ktAQ3ek8RtGtgrIKBmUVVIXQM1c7RisfDR7tQ" alt="">
+                <!-- <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/3ohhwHHhB9qckB1Af6" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/stanaustralia-stan-3ohhwHHhB9qckB1Af6">via GIPHY</a></p> -->
+                <img class="suggestions-pic" src="/IMG_8586.jpg" alt="">
             </div>
             <h3>Suggestions from the Bride</h3>
             <div class="suggestions">
@@ -72,7 +73,7 @@
         
         <section>
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0323/5573/files/650e2b03bd2c8515e932049209cf1deb.jpg?v=1559330257">
+                <img class="suggestions-pic" src="/hangover.jpg">
             </div>
             <h3>... from the Groom</h3>
             <div class="suggestions">
@@ -98,9 +99,8 @@
         </section>
 
         <section>
-            <h1>Create Your Itinerary!</h1>
-            <a class="u-full-width button button-primary" href="/srq/new">Create New Activity</a>
-           
+            <h1>Explore SRQ</h1>
+            <br/>
             <!-- GOOGLE MAPS EMBEDDED -->
             <!-- https://developers.google.com/maps/documentation/embed/get-started -->      
             <iframe
@@ -112,12 +112,14 @@
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHrO10hgkTAWNJeiD4nH-o6hSGLaF_ERM
                 &q=Sarasota+FL">
             </iframe>
-           
+            <br/>
+            <br/>
+            <a class="button" href="/srq/new">Create Your Own Activity!</a>
             <div class="row">
                 <div>
                     <ul>
                         <% for (let i=0;i<options.length;i++) { %>
-                        <li>
+                        <li class="one-third column">
                             <a href="/srq/<%= options[i]._id %>">
                             <%= options[i].Name %>
                             </a> 
