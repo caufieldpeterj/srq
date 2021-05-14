@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,28 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/skeleton.css">
 </head>
+
 <body>
-    <div class="container">
-        <div> 
-            <h1>Create New User</h1>
+    <div class="offset-by-one-third column" style="padding-top: 20%"></div>
+        <div>
+            <div>
+                <h1>Create New User</h1>
+            </div>
+            <div>
+                <a class="button" href="/srq">Back to Homepage</a>
+            </div>
         </div>
         <div>
-            <a class="button" href="/srq">Back to Homepage</a>
+            <form action="/users" method="POST">
+                <label for="name">User Name:</label>
+                <input type="text" name="username" required />
+                <label for="color">Password:</label>
+                <input type="password" name="password" />
+                <br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
-    
-    <div>
-        <form action="/users" method="POST">
-            <label for="name">User Name:</label>
-            <input type="text" name="username" required/>
-            <label for="color">Password:</label>
-            <input type="password" name="password"/>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
 </body>
+
 </html>

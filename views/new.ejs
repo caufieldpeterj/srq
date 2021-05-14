@@ -10,9 +10,9 @@
     <style> body {background: #98D7C2;}</style>
 </head>
 <body class="new">
-    <div class="container">
+    <div class="offset-by-one-third column" style="padding-top: 20%">
         <div> 
-            <h1>Create a New Activity</h1>
+            <h1>Enter Activity Below</h1>
         </div>
         <div>
             <a class="button" href="/srq">Back to Homepage</a>
@@ -21,11 +21,11 @@
         </div>
         <div>
             <form action='/srq' method="POST">
-                Name: <input type="text" name="Name"> 
+                <input type="text" name="Name" placeholder="Name"> 
                 <br/>
-                Description: <input type="text" name="Description">
+                <input type="text" name="Description" placeholder="Description">
                 <br/>
-                Date: <input type="date" name="Date">
+                <input type="date" name="Date">
                 <br/><br/>
                 <input class="button button-primary" type="submit" value="SUBMIT">
             </form>
